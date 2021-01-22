@@ -4,7 +4,7 @@
     file:
       path: ~/software
       state: directory
-      mode: "644"
+      mode: "755"
 
   - name: Clone `fwilhe/bin` Repository
     git:
@@ -26,6 +26,7 @@
       - https://github.com/cli/cli/releases/download/v{{ GH_VERSION }}/gh_{{ GH_VERSION }}_linux_amd64.tar.gz
       - https://github.com/JetBrains/kotlin/releases/download/v{{ KOTLIN_VERSION }}/kotlin-compiler-{{ KOTLIN_VERSION }}.zip
       - https://github.com/JetBrains/kotlin/releases/download/v{{ KOTLIN_VERSION }}/kotlin-native-prebuilt-linux-{{ KOTLIN_VERSION }}.tar.gz
+      - https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-{{ GRAAL_VERSION }}/graalvm-ce-java11-linux-amd64-{{ GRAAL_VERSION }}.tar.gz
 
   - name: Update Path
     template:
