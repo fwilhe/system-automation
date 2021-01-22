@@ -11,6 +11,11 @@
       repo: https://github.com/fwilhe2/bin.git
       dest: ~/software/fwilhe-bin
 
+  - name: Clone `graalvm/mx` Repository
+    git:
+      repo: https://github.com/graalvm/mx
+      dest: ~/software/graalvm-mx
+
   - name: Install Development Tools
     unarchive:
       src: "{{ item }}"
